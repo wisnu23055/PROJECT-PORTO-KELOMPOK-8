@@ -1,0 +1,244 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+    min-width: 1519px;
+}
+/* ini adalah navbar */
+.background-nav{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    display: flex;
+    width: 1300px;
+    height: 60px;
+    background-color: rgb(71 165 206);
+    margin: 0px auto;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.icon-profil img{
+    width: 50px;
+    float: left;
+    margin-left: 70px; 
+    border-radius: 50%;  
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+.link{
+    float: left;
+    margin-left: 880px;
+}
+.link ul{
+    display: flex;
+    list-style-type: none;
+}
+.link ul li{
+    margin: 0px 10px;
+    padding: 5px;
+}
+.link ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+.link ul li a:hover{
+    color: black;
+}
+
+/* ini adalah halaman satu */
+.halaman-satu-1{
+    margin-top: 60px;
+    width: 65%; 
+    height: 715px;
+    /* background-color: blueviolet; */
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.halaman-satu-lapisan-1{
+    width: 840px;
+    height: 573px;
+    /* background-color: antiquewhite; */
+    margin-left: 117px;
+}
+.halaman-satu-nama{
+    width: 840px;
+}
+.halaman-satu-lapisan-1 h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: rgb(76 167 207);
+}
+.halaman-satu-profesi{
+    width: 840px;
+}
+.halaman-satu-lapisan-1 h3{
+    font-size: 30px;
+    margin: 0px;
+    color: rgb(35 39 234);
+}
+.halaman-satu-deskripsi{
+    width: 840px;
+}
+.halaman-satu-lapisan-1 p{
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 30px;
+}
+.sosial-media{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(76 167 207);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.sosial-media p{
+    margin: 0px;
+    color: rgb(76 167 207);
+}
+.icon-sosial-media{
+    margin-top: 30px;
+}
+.icon-sosial-media img{
+    width: 43px;
+    margin-right: 22px;
+}
+
+
+
+.halaman-satu-2{
+    margin-top: 60px;
+    width: 35%;
+    height: 715px;
+    /* background-color: aqua; */
+    float: left;
+}
+.halaman-satu-2 img{
+    width: 380px;
+    margin-left: 37px;
+    margin-top: 110px;   
+}
+
+/* ini adalah halaman dua */
+.halaman-dua{
+    clear: both;
+    width: 100%;
+    height: 1024px;
+    border-radius: 40px;
+    background-color: rgb(24 145 198);
+}
+.halaman-dua-skill p{
+    font-size: 250%;
+    position: relative;
+    top: 40px;
+    color: white;
+    text-align: center;
+}
+.background-grid{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: repeat(2 ,1fr);
+    gap: 20px;
+    width: 1300px;
+    height: 820px;
+    /* background-color: white; */
+    margin: 80px auto;
+}
+.grid-skill{
+    background-color: aqua;
+    border-radius: 40px;
+}
+.grid-skill-1{
+    background-color: rgb(35 39 234);
+    text-align: center;
+}
+.uiux{
+    font-size: 30px;
+    color: white;
+    margin-top: 40px;
+}
+.uiux-p{
+    margin: 60px 40px;
+    font-size: 150%;
+    color: white;
+}
+
+.grid-skill-2{
+    background-color: rgb(71 165 206);
+    text-align: center;
+}
+.frontend{
+    font-size: 30px;
+    color: white;
+    margin-top: 40px;
+}
+.frontend-p{
+    margin: 60px 40px;
+    font-size: 150%;
+    color: white;
+}
+
+.grid-skill-3{
+    background-color: rgb(35 39 234);
+    text-align: center;    
+}
+.editphoto{
+    font-size: 30px;
+    color: white;
+    margin-top: 40px;
+}
+.editphoto-p{
+    margin: 60px 40px;
+    font-size: 150%;
+    color: white;
+}
+
+.grid-skill-4{
+    background-color: rgb(71 165 206);
+    text-align: center;
+}
+.copywriting{
+    font-size: 30px;
+    color: black;
+    margin-top: 40px;
+}
+.copywriting-p{
+    margin: 60px 40px;
+    font-size: 150%;
+    color: black;
+}
+
+.grid-skill-5{
+    background-color: rgb(207 207 76);
+    text-align: center;
+}
+.dblender{
+    font-size: 30px;
+    color: black;
+    margin-top: 40px;
+}
+.dblender-p{
+    margin: 60px 40px;
+    font-size: 150%;
+    color: black;
+}
+
+.grid-skill-6{
+    background-color: rgb(71 165 206);
+    text-align: center;
+}
+.dunity{
+    font-size: 30px;
+    color: black;
+    margin-top: 40px;
+}
+.dunity-p{
+    margin: 60px 40px;
+    font-size: 150%;
+    color: black;
+}
