@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     font-family: sans-serif;
-    min-width: 1519px;
+    min-width: 1300px;
     background-color: rgb(255, 225, 255);
 }
 .mid{
@@ -511,7 +511,6 @@ body{
 
 
 /* ini adalah halaman 5 */
-/* Aditya */
 .halaman-lima{
     display: flex;
     justify-content: center;
@@ -530,6 +529,8 @@ body{
     text-align: center;
     font-size: 250%;
 }
+
+/* Aditya */
 .latar-aditya{
     border-radius: 20px;
     width: 90%;
