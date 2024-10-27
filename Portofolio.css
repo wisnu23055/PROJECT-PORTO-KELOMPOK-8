@@ -14,7 +14,7 @@ body{
     height: auto;
 }
 /* ini adalah navbar */
-.background-nav{
+.background-nav {
     position: fixed;
     left: 0px;
     right: 0px;
@@ -27,43 +27,93 @@ body{
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 50;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
-.icon-profil img{
+
+.icon-profil img {
     width: 50px;
     float: left;
     margin-left: 70px; 
     border-radius: 50%;  
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
-.link{
+
+.link {
     float: left;
     margin-left: 720px;
 }
-.link ul{
+
+.link ul {
     display: flex;
     list-style-type: none;
 }
-.link ul li{
+
+.link ul li {
     margin: 0px 10px;
     padding: 5px;
 }
-.link ul li a{
+
+.link ul li a {
     text-decoration: none;
     color: rgb(255, 225, 255);
     font-size: 13px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
-.link ul li a:hover{
+
+.link ul li a:hover {
     color: #E4B1F0;
 }
 
+.link ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #E4B1F0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.link ul li a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ini adalah halaman satu */
+.mid {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
 .halaman-satu-1 {
     margin-top: 60px;
-    width: 65%; 
+    width: 65%;
     height: 715px;
     display: flex;
     align-items: center;
-    justify-content: center;  /* Menambahkan ini untuk memusatkan konten secara horizontal */
+    justify-content: center;
     float: left;
 }
 
@@ -109,7 +159,6 @@ body{
     height: 40px;
     background-color: rgb(67, 56, 120);
     border-radius: 10px;
-    /* border: 2px solid rgb(0, 0, 0); */
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -127,22 +176,74 @@ body{
 .icon-sosial-media img {
     width: 43px;
     margin-right: 22px;
+    transition: transform 0.2s;
 }
 
-/* ANJAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY */
+.icon-sosial-media img:hover {
+    transform: scale(1.1);
+}
+
 .halaman-satu-2 {
     margin-top: 60px;
     width: 35%;
     height: 715px;
-    display: flex;  /* Mengubah ini menjadi flex */
-    justify-content: center;  /* Menambahkan ini untuk memusatkan gambar */
-    align-items: center;  /* Menambahkan ini untuk memusatkan gambar secara vertikal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: left;
+    transition: opacity 2s ease-in-out;
+    animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(0px, 10px);
+    }
+    75% {
+        transform: translate(-10px, -5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.foto-halaman img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 2s ease-in-out;
 }
 
 .halaman-satu-2 img {
     width: 380px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ini adalah halaman dua */
@@ -265,6 +366,65 @@ body{
     color: rgb(67, 56, 120);
 }
 
+/* Animasi masuk dari kiri */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animasi masuk dari kanan */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Class untuk animasi masuk dari kiri */
+.fade-in-left {
+    animation: fadeInLeft 2s ease forwards;
+}
+
+/* Class untuk animasi masuk dari kanan */
+.fade-in-right {
+    animation: fadeInRight 2s ease forwards;
+}
+
+/* Class untuk animasi keluar (hilang) */
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -372,6 +532,62 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Animasi masuk dari atas */
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi masuk dari bawah */
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Class untuk animasi masuk dari atas */
+.fade-in-top {
+    animation: fadeInTop 2s ease forwards;
+}
+
+/* Class untuk animasi masuk dari bawah */
+.fade-in-bottom {
+    animation: fadeInBottom 2s ease forwards;
+}
+
+/* Class untuk animasi keluar (hilang) */
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -405,8 +621,6 @@ body{
     /* background-color: white; */
     margin: 80px auto;
 }
-
-
 .grid-tools-1{
     background-color: rgb(228, 177, 240);
     text-align: center;
@@ -422,8 +636,6 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 19px rgba(0, 0, 0, 0.3);
 }
-
-
 .grid-tools-2{
     background-color: rgb(255, 225, 255);
     text-align: center;
@@ -439,8 +651,6 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 19px rgba(0, 0, 0, 0.3);
 }
-
-
 .grid-tools-3{
     background-color: rgb(228, 177, 240);
     text-align: center;
@@ -456,8 +666,6 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 19px rgba(0, 0, 0, 0.3);
 }
-
-
 .grid-tools-4{
     background-color: rgb(255, 225, 255);
     text-align: center;
@@ -473,8 +681,6 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 19px rgba(0, 0, 0, 0.3);
 }
-
-
 .grid-tools-5{
     background-color: rgb(228, 177, 240);
     text-align: center;
@@ -490,8 +696,6 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 19px rgba(0, 0, 0, 0.3);
 }
-
-
 .grid-tools-6{
     background-color: rgb(255, 225, 255);
     text-align: center;
@@ -507,6 +711,46 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 19px rgba(0, 0, 0, 0.3);
 }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 2s ease forwards;
+}
+
+.fade-in-down {
+    animation: fadeInDown 2s ease forwards;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -652,6 +896,70 @@ body{
     font-size: 120%;
     text-align: justify;
 }
+
+/* Animasi memudar dan bergerak dari kanan */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+/* Animasi memudar dan bergerak dari kiri */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+/* Tambahkan kelas untuk efek animasi */
+.fade-in-right {
+    animation: fadeInRight 2s forwards;
+}
+
+.fade-out-right {
+    animation: fadeOutRight 2s forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 2s forwards;
+}
+
+.fade-out-left {
+    animation: fadeOutLeft 2s forwards;
+}
+
 
 
 
